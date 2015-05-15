@@ -349,8 +349,13 @@
 #ifdef ADVANCE
   #define EXTRUDER_ADVANCE_K .0
 
-  #define D_FILAMENT 2.85
-  #define STEPS_MM_E 836
+  //#define D_FILAMENT 2.85
+  #define D_FILAMENT 1.75
+  // Default value in firmware. Adjusting for Bowden extruder.
+  //#define STEPS_MM_E 836
+  // 5mm @ 836 steps extrudes approximately 25mm of filament
+  #define STEPS_MM_E 167
+  
   #define EXTRUSION_AREA (0.25 * D_FILAMENT * D_FILAMENT * 3.14159)
   #define STEPS_PER_CUBIC_MM_E (axis_steps_per_unit[E_AXIS]/ EXTRUSION_AREA)
 
